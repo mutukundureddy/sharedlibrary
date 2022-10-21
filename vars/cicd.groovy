@@ -10,10 +10,10 @@ def newmaven()
 
 def newdeploy (jobname,ip,context)
 {
-  sh"scp /home/ubuntu/.jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}/home/ubuntu/tomcat9/webapps/${context}.war"
+  sh "scp /home/ubuntu/.jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}/home/ubuntu/tomcat9/webapps/${context}.war"
 }
  
 def newselenium (jobname)
 {
-  sh"java -jar /home/ubuntu/.jenkins/workspace/${jobname}/testing.jar"
+  sh "java -jar /home/ubuntu/.jenkins/workspace/${jobname}/testing.jar"
 }
